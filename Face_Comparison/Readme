@@ -1,0 +1,5 @@
+Install the following configurations:
+pip install opencv2
+pip install face recognition
+
+The code compares two input images of people and returns True or False depending on whether they match or not. 
