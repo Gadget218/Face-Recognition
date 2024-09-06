@@ -26,10 +26,11 @@ def compare_images():
 
         #Let's compare the two faces to see if they are the same
         result=face_recognition.compare_faces([img_encoding1],img_encoding2)
-        if result==False:
-            messagebox.showinfo("Result", "The faces do not match.")
-        else:
+        messagebox.showinfo("Result", result)
+        if result[0]: # Access the first (and only) value in the result list
             messagebox.showinfo("Result", "The faces match!")
+        else:
+            messagebox.showinfo("Result", "The faces do not match.")
 
         cv2.imshow("Img1", img1) #to see the image
         cv2.imshow("Img 2", img2)
