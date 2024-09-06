@@ -18,7 +18,7 @@ def compare_images():
         rgb_img1=cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)#Convert color from bgr format to rgb
 
         #Encode the image
-        img_encoding1 = face_recognition.face_encodings(rgb_img1)[0]#it couldprobably load multiple images so we use 0 as an index
+        img_encoding1 = face_recognition.face_encodings(rgb_img1)[0]#it could probably load multiple images so we use 0 as an index
 
         img2=cv2.imread(img_path2)
         rgb_img2=cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
